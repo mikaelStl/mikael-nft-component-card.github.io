@@ -20,6 +20,7 @@ body{
     height: 100vh;
     width: 1440px;
     background-color: var(--main-BG);
+    font-family: 'Outfit';
 }
 body .card {
     display: flex;
@@ -30,11 +31,16 @@ body .card {
     border-radius: 12px;
     background-color: var(--card-BG);
 }
-body .card #img-container{
+body .card #nft-preview{
+    border: solid 1px black;
+    height: 300px;
+    width: 300px;
+    border-radius: 12px;
     margin: 25px;
 }
-body .card #img-container img{
-    border-radius: 12px;
+body .card #nft-preview #img-container{
+    background: url(./images/image-equilibrium.jpg) center center no-repeat;
+    background-size: cover;
 }
 body .card .content{
     margin-bottom: 20px;
@@ -43,47 +49,58 @@ body .card .content{
     justify-content: space-between;
     width: 300px;
     height: 200px;
-    border: solid 1px green;
-    font-family: 'Outfit';
-}
-body .card .content div{
-    margin-bottom: 20px;
 }
 body .card .content #title-area{
+    color: var(--White);
     font-weight: 600;
 }
 body .card .content #description{
+    color: var(--soft-blue);
     font-weight: 300;
 }
 body .card .content #details{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: solid 1px red;
+    color: var(--cyan);
+    font-size: 14px;
     font-weight: 400;
+    border-bottom: solid 1px var(--line);
+    padding-bottom: 20px;
 }
-body .card .content #details div, time{
+body .card .content #details div{
     display: flex;
     align-items: center;
     margin: 0px;
 }
-body .card .content #details svg{
-    margin-right: 5px;
-}
 body .card .content #creator{
     display: flex;
     align-items: center;
-}
-body .card .content #creator p{
     font-weight: 300;
-}
-body .card .content #creator span{
-    font-weight: 400;
+    color: var(--soft-blue);
+    margin-bottom: 10px;
 }
 body .card .content #creator #avatar{
-    margin: 10px;
+    border: 1px solid var(--White);
+    border-radius: 50%;
+    margin-right: 10px;
     width: 32px;
     height: 32px;
     background: url(./images/image-avatar.png) center center no-repeat;
     background-size: cover;
+}
+body .card .content #creator span{
+    color: var(--White);
+    font-weight: 400;
+}
+
+.attribution{
+    margin-top: 20px;
+    color: var(--White);
+    font-size: 14px;
+    font-weight: 300;
+}
+.attribution a{
+    color: var(--White);
+    font-weight: 600;
 }
