@@ -32,15 +32,25 @@ body .card {
     background-color: var(--card-BG);
 }
 body .card #nft-preview{
-    border: solid 1px black;
     height: 300px;
     width: 300px;
     border-radius: 12px;
     margin: 25px;
+    overflow: hidden;
+}
+body .card #nft-preview div{
+    height: 300px;
+    width: 300px;
 }
 body .card #nft-preview #img-container{
     background: url(./images/image-equilibrium.jpg) center center no-repeat;
     background-size: cover;
+}
+body .card #nft-preview #eye-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
 }
 body .card .content{
     margin-bottom: 20px;
