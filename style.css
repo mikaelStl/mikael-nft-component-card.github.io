@@ -19,6 +19,7 @@ body{
     align-items: center;
     height: 100vh;
     width: 1440px;
+    background-color: var(--main-BG);
 }
 body .card {
     display: flex;
@@ -27,7 +28,7 @@ body .card {
     align-items: center;
     width: 350px;
     border-radius: 12px;
-    border: solid 1px blue;
+    background-color: var(--card-BG);
 }
 body .card #img-container{
     margin: 25px;
@@ -36,6 +37,7 @@ body .card #img-container img{
     border-radius: 12px;
 }
 body .card .content{
+    margin-bottom: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -62,7 +64,11 @@ body .card .content #details{
 }
 body .card .content #details div, time{
     display: flex;
+    align-items: center;
     margin: 0px;
+}
+body .card .content #details svg{
+    margin-right: 5px;
 }
 body .card .content #creator{
     display: flex;
