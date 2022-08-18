@@ -6,6 +6,7 @@
     --card-BG: hsl(216, 50%, 16%);
     --line: hsl(215, 32%, 27%);
     --White: hsl(0, 0%, 100%);
+    --card-shadow: rgba(0, 0, 0, 0.4);
 }
 *{
     padding: 0;
@@ -22,6 +23,7 @@ body{
     background-color: var(--main-BG);
     font-family: 'Outfit';
 }
+/*Styling card and its content*/
 body .card {
     display: flex;
     flex-direction: column;
@@ -30,17 +32,18 @@ body .card {
     width: 350px;
     border-radius: 12px;
     background-color: var(--card-BG);
+    box-shadow: 0 0 40px var(--card-shadow);
 }
 body .card #nft-preview{
     height: 300px;
     width: 300px;
-    border-radius: 12px;
     margin: 25px;
     overflow: hidden;
 }
 body .card #nft-preview div{
     height: 300px;
     width: 300px;
+    border-radius: 12px;
 }
 body .card #nft-preview #img-container{
     background: url(./images/image-equilibrium.jpg) center center no-repeat;
@@ -51,6 +54,8 @@ body .card #nft-preview #eye-container{
     justify-content: center;
     align-items: center;
     position: absolute;
+    visibility: hidden;
+    transition: linear .3s;
 }
 body .card .content{
     margin-bottom: 20px;
@@ -60,9 +65,10 @@ body .card .content{
     width: 300px;
     height: 200px;
 }
-body .card .content #title-area{
+body .card .content #name{
     color: var(--White);
     font-weight: 600;
+    transition: linear .3s;
 }
 body .card .content #description{
     color: var(--soft-blue);
@@ -72,16 +78,23 @@ body .card .content #details{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: var(--cyan);
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 400;
     border-bottom: solid 1px var(--line);
     padding-bottom: 20px;
+    color: var(--soft-blue);
 }
 body .card .content #details div{
     display: flex;
     align-items: center;
     margin: 0px;
+}
+body .card .content #details svg{
+    margin-right: 5px;
+}
+body .card .content #details #price{
+    color: var(--cyan);
+    font-weight: 600;
 }
 body .card .content #creator{
     display: flex;
@@ -102,8 +115,23 @@ body .card .content #creator #avatar{
 body .card .content #creator span{
     color: var(--White);
     font-weight: 400;
+    transition: linear .3s;
 }
-
+/*Setting hover and animations*/
+body .card #nft-preview:hover #eye-container{
+    background-color: var(--cyan);
+    visibility: visible;
+    cursor: pointer;
+}
+body .card .content #name:hover{
+    color: var(--cyan);
+    cursor: pointer;
+}
+body .card .content #creator span:hover{
+    color: var(--cyan);
+    cursor: pointer;
+}
+/*Style of footer(attribution class)*/
 .attribution{
     margin-top: 20px;
     color: var(--White);
