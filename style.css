@@ -13,132 +13,136 @@
     margin: 0;
     box-sizing: border-box;
 }
-body{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 1440px;
-    background-color: var(--main-BG);
-    font-family: 'Outfit';
+@media screen and (max-width: 1440px) {
+    body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100%;
+        background-color: var(--main-BG);
+        font-family: 'Outfit';
+    }
+    /*Styling card and its content*/
+    body .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 350px;
+        border-radius: 12px;
+        background-color: var(--card-BG);
+        box-shadow: 0 0 40px var(--card-shadow);
+    }
+    body .card #nft-preview{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 300px;
+        width: 300px;
+        margin: 25px;
+        border-radius: 13px;
+        overflow: hidden;
+        cursor: pointer;
+        background-color: var(--cyan);
+    }
+    body .card #nft-preview svg{
+        visibility: hidden;
+        position: absolute;
+        z-index: 9999;
+    }
+    body .card #nft-preview img{
+        transition: 0.3s;
+    }
+    body .card .content{
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 300px;
+        height: 200px;
+    }
+    body .card .content #name{
+        color: var(--White);
+        font-weight: 600;
+        transition: linear .3s;
+        cursor: pointer;
+    }
+    body .card .content #description{
+        color: var(--soft-blue);
+        font-weight: 300;
+    }
+    body .card .content #details{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 15px;
+        font-weight: 400;
+        border-bottom: solid 1px var(--line);
+        padding-bottom: 20px;
+        color: var(--soft-blue);
+    }
+    body .card .content #details div{
+        display: flex;
+        align-items: center;
+    }
+    body .card .content #details svg{
+        margin-right: 5px;
+    }
+    body .card .content #details #price{
+        color: var(--cyan);
+        font-weight: 600;
+    }
+    body .card .content #creator{
+        display: flex;
+        align-items: center;
+        color: var(--soft-blue);
+        margin-bottom: 10px;
+    }
+    body .card .content #creator span{
+        color: var(--White);
+        transition: linear .3s;
+        cursor: pointer;
+    }
+    body .card .content #creator #avatar{
+        border: 1px solid var(--White);
+        border-radius: 50%;
+        margin-right: 10px;
+        width: 32px;
+        height: 32px;
+        background: url(./images/image-avatar.png) center center no-repeat;
+        background-size: cover;
+    }
+    /*Setting hover and animations*/
+    body .card #nft-preview:hover svg{
+        visibility: visible;
+    }
+    body .card #nft-preview:hover img{
+        opacity: 0.5;
+    }
+    body .card .content #name:hover{
+        color: var(--cyan);
+    }
+    body .card .content #creator span:hover{
+        color: var(--cyan);
+    }
+    /*Style of footer(attribution class)*/
+    .attribution{
+        margin-top: 20px;
+        color: var(--White);
+        font-size: 14px;
+        font-weight: 300;
+    }
+    .attribution a{
+        color: var(--White);
+        font-weight: 600;
+    }    
 }
-/*Styling card and its content*/
-body .card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 350px;
-    border-radius: 12px;
-    background-color: var(--card-BG);
-    box-shadow: 0 0 40px var(--card-shadow);
-}
-body .card #nft-preview{
-    height: 300px;
-    width: 300px;
-    margin: 25px;
-    overflow: hidden;
-}
-body .card #nft-preview div{
-    height: 300px;
-    width: 300px;
-    border-radius: 12px;
-}
-body .card #nft-preview #img-container{
-    background: url(./images/image-equilibrium.jpg) center center no-repeat;
-    background-size: cover;
-}
-body .card #nft-preview #eye-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    visibility: hidden;
-    transition: linear .3s;
-}
-body .card .content{
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 300px;
-    height: 200px;
-}
-body .card .content #name{
-    color: var(--White);
-    font-weight: 600;
-    transition: linear .3s;
-}
-body .card .content #description{
-    color: var(--soft-blue);
-    font-weight: 300;
-}
-body .card .content #details{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 15px;
-    font-weight: 400;
-    border-bottom: solid 1px var(--line);
-    padding-bottom: 20px;
-    color: var(--soft-blue);
-}
-body .card .content #details div{
-    display: flex;
-    align-items: center;
-    margin: 0px;
-}
-body .card .content #details svg{
-    margin-right: 5px;
-}
-body .card .content #details #price{
-    color: var(--cyan);
-    font-weight: 600;
-}
-body .card .content #creator{
-    display: flex;
-    align-items: center;
-    font-weight: 300;
-    color: var(--soft-blue);
-    margin-bottom: 10px;
-}
-body .card .content #creator #avatar{
-    border: 1px solid var(--White);
-    border-radius: 50%;
-    margin-right: 10px;
-    width: 32px;
-    height: 32px;
-    background: url(./images/image-avatar.png) center center no-repeat;
-    background-size: cover;
-}
-body .card .content #creator span{
-    color: var(--White);
-    font-weight: 400;
-    transition: linear .3s;
-}
-/*Setting hover and animations*/
-body .card #nft-preview:hover #eye-container{
-    background-color: var(--cyan);
-    visibility: visible;
-    cursor: pointer;
-}
-body .card .content #name:hover{
-    color: var(--cyan);
-    cursor: pointer;
-}
-body .card .content #creator span:hover{
-    color: var(--cyan);
-    cursor: pointer;
-}
-/*Style of footer(attribution class)*/
-.attribution{
-    margin-top: 20px;
-    color: var(--White);
-    font-size: 14px;
-    font-weight: 300;
-}
-.attribution a{
-    color: var(--White);
-    font-weight: 600;
+
+/*Making the Responsiveness*/
+@media screen and (max-width: 375px){
+    body .card, .attribution{
+        transform: scale(0.8);
+    }
 }
