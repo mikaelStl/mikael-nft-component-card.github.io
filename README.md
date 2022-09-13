@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [](https://github.com/mikaelStl/mikael-nft-component-card.github.io)
-- Live Site URL: [](https://mikaelstl.github.io/mikael-nft-component-card.github.io/)
+- Solution URL: [Github](https://github.com/mikaelStl/mikael-nft-component-card.github.io)
+- Live Site URL: [Live Site](https://mikaelstl.github.io/mikael-nft-component-card.github.io/)
 
 ## My process
 
